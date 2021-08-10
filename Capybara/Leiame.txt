@@ -1,0 +1,9 @@
+Subir o Docker:
+> docker-compose up -d
+
+Instalar plugin para formatar o conteudo do cucumber em português:
+1 - Abrir o arquivo cucumber-format.txt
+2 - Copiar todo conteúdo;
+3 - Digitar CTRL+SHIFT+P no Visual Studio Code;
+4 - Pesquisar pelo Open Setting (Json)
+5 - Adicionar contéudo copiado dentro do arquivo;

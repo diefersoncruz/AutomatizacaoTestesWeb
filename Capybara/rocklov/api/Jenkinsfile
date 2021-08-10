@@ -1,0 +1,37 @@
+pipeline {
+    agent {
+        docker{
+            image 'ruby'
+            args '--network rocklov-network'
+        }
+    }
+
+    stages {
+        stage('Prep'){
+        steps {
+                sh 'cd rocklov/api && bundle install'
+            }
+        }
+        stage('Testing') {
+            steps {
+                sh 'cd rocklov/api  && rspec'
+            }
+        }
+        stage('UAT'){
+            steps{
+            echo 'Aguardando testes de aceitação.'
+            input message: 'Podemos ir para produção'
+            }
+        }
+        stage('prod'){
+            steps{
+                echo 'Api pronta para produção :)'
+            }
+        }
+    }
+    post{
+        always{
+            junit 'rocklov/api/logs/report.xml'
+        }
+    }
+}

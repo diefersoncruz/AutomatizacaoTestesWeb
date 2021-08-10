@@ -1,0 +1,23 @@
+--- 
+default: --publish-quiet -p allure -p bdd -p local -p chrome 
+jenkins: --publish-quiet -p allure -p bdd -p local -p chrome_headless
+
+# Formato de execução do cucumber com formato padrão do cucumber
+bdd: -f pretty
+# Formato de execução do cucumber com pontos de progresso
+dots: -f progress
+# Salva o resultado em HTML
+html: -f html -o logs/report.html
+
+# Configura o Allure
+allure: --format AllureCucumber::CucumberFormatter --out=logs
+
+# Configurações de ambiente
+local: CONFIG=local.yml
+hmg: CONFIG=hmg.yml
+
+# variaveis de ambiente para crossbrowser
+firefox: BROWSER=firefox
+fire_headless: BROWSER=firefox_headless
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless

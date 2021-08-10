@@ -1,0 +1,35 @@
+---
+- title: email invalido
+  payload:
+    email: dieff.cruz@bol.com
+    password: "1234"
+  code: 401
+  error: Unauthorized
+- title: email em branco
+  payload:
+    email: ""
+    password: abcde
+  code: 412
+  error: required email
+- title: sem o campo email
+  payload:
+    password: abcde
+  code: 412
+  error: required email
+- title: senha invalida
+  payload:
+    email: dieff.cruz@gmail.com
+    password: abcde
+  code: 401
+  error: Unauthorized
+- title: senha em branco
+  payload:
+    email: dieff.cruz@gmail.com
+    password: ""
+  code: 412
+  error: required password
+- title: sem o campo senha
+  payload:
+    email: dieff.cruz@gmail.com
+  code: 412
+  error: required password
