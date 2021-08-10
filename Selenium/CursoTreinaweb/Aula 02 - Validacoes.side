@@ -1,0 +1,88 @@
+{
+  "id": "6ec824f5-48c2-46c8-91bf-624fcfc3ebcd",
+  "version": "2.0",
+  "name": "Comandos Basicos",
+  "url": "https://www.google.com.br/",
+  "tests": [{
+    "id": "48c65d79-3188-4e9e-8bcf-01d73ab5407f",
+    "name": "Validacoes Pagina",
+    "commands": [{
+      "id": "522037fb-190d-4738-8cbb-f56ef3b94e97",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com.br/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84b15252-e4c4-4a7e-8e02-c696e2a33dc4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1036",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d806aa58-5f21-4b9c-ad60-fb75dfa19fdd",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "carro"
+    }, {
+      "id": "4d54e2c3-67aa-406e-bb08-d3d69eb9c934",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "aa0bcc51-9558-4587-9afd-6f083eb88fc6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Shopping",
+      "targets": [
+        ["linkText=Shopping", "linkText"],
+        ["css=.gvybPb a", "css:finder"],
+        ["xpath=//a[contains(text(),'Shopping')]", "xpath:link"],
+        ["xpath=//div[@id='_Ut8HYfjtIbjB5OUPrPKI6Aw9']/g-menu/g-menu-item/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search?q=teste&source=lnms&tbm=shop&sa=X&ved=2ahUKEwj43oX7pZLyAhW4ILkGHSw5As0Q_AUoAHoECAEQCg')]", "xpath:href"],
+        ["xpath=//div[5]/div/g-menu/g-menu-item/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shopping')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "914d4081-8d53-4860-af71-6d3d4ba58651",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "carro - Google Shopping",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe4f82be-1682-47e9-abd6-35da05395259",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "carro - Google Shopping",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e2641edb-ea7d-404f-8498-68c6d07d1602",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["48c65d79-3188-4e9e-8bcf-01d73ab5407f"]
+  }],
+  "urls": ["https://www.google.com.br/"],
+  "plugins": []
+}
