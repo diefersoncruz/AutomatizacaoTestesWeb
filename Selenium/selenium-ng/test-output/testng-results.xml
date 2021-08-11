@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6498" started-at="2021-08-11T13:21:34Z" finished-at="2021-08-11T13:21:41Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6498" started-at="2021-08-11T13:21:34Z" finished-at="2021-08-11T13:21:41Z">
+      <class name="br.com.treinaweb.selenium.tests.HelloSeleniunTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:br.com.treinaweb.selenium.tests.HelloSeleniunTest@1ffe63b9]" name="setup" is-config="true" duration-ms="4874" started-at="2021-08-11T10:21:35Z" finished-at="2021-08-11T10:21:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testHelloSelenium()[pri:0, instance:br.com.treinaweb.selenium.tests.HelloSeleniunTest@1ffe63b9]" name="testHelloSelenium" duration-ms="826" started-at="2021-08-11T10:21:39Z" finished-at="2021-08-11T10:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHelloSelenium -->
+        <test-method status="PASS" signature="afterTests()[pri:0, instance:br.com.treinaweb.selenium.tests.HelloSeleniunTest@1ffe63b9]" name="afterTests" is-config="true" duration-ms="776" started-at="2021-08-11T10:21:40Z" finished-at="2021-08-11T10:21:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTests -->
+      </class> <!-- br.com.treinaweb.selenium.tests.HelloSeleniunTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
