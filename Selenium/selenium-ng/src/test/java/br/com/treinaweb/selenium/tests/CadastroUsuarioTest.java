@@ -14,7 +14,8 @@ public class CadastroUsuarioTest extends TreinaWebSeleniumTestBase{
 		setUrl("https://matematicando.web.app/testeSelenium/teste-selenium.html");
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
+	@Test
 	public void verificarEmailsDiferentesTest() {
 		//Preenche os campos de e-mail
 		getDriver().findElement(By.id("txb-email")).sendKeys("dieff.cruz@gmail.com");
@@ -26,7 +27,8 @@ public class CadastroUsuarioTest extends TreinaWebSeleniumTestBase{
 		Assert.assertTrue(getDriver().findElement(By.id("div-val-email")).isDisplayed());
 		assertEquals(getDriver().findElement(By.id("div-val-email")).getText(), "Os e-mails devem ser iguais");
 	}
-	@Test(priority = 1)
+	//@Test(priority = 1)
+	@Test
 	public void verificarNomeNaoPreenchidoTest() {
 		getDriver().findElement(By.id("txb-nome")).sendKeys("");
 		getDriver().findElement(By.id("btn-salvar")).click();
